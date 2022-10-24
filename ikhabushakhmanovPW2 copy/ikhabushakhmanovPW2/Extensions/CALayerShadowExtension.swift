@@ -15,6 +15,5 @@ extension CALayer {
         shadowRadius = radiusBlur
         shadowOpacity = inlineOpacity
         masksToBounds = false
-        
     }
 }

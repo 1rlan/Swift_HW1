@@ -7,11 +7,21 @@
 
 import UIKit
 
-final class WelcomeViewController: UIViewController {
+final class WelcomeViewController: UIViewController, ObserverProtocol {
+    
+    func changeState(_ color: UIColor) {
+        UIView.animate(withDuration: 0.5) {
+            self.view.backgroundColor = color
+        }
+    }
+    
+
     private let incrementButton = UIButton()
     private let commentLabel = UILabel()
     private let valueLabel = UILabel()
     private let commentView = UIView()
+    private var buttonsSV = UIStackView()
+    private var colorPaletteView = ColorPaletteView()
     private var value: Int = 0
     
     override func viewDidLoad() {
@@ -26,6 +36,9 @@ final class WelcomeViewController: UIViewController {
         setupValueLabel()
         setupCommentView()
         setupMenuButtons()
+        setupColorControlSV()
+        
+        colorPaletteView.delegate = self
     }
     
     
@@ -113,16 +126,27 @@ final class WelcomeViewController: UIViewController {
     
     
     private func setupMenuButtons() {
-        let colorsButton = makeMenuButton(title: "🤓")
+        let colorsButton = makeMenuButton(title: "🎨")
         let notesButton = makeMenuButton(title: "📲")
         let newsButton = makeMenuButton(title: "🗿")
-        let buttonsSV = UIStackView(arrangedSubviews: [colorsButton, notesButton, newsButton])
+        buttonsSV = UIStackView(arrangedSubviews: [colorsButton, notesButton, newsButton])
         buttonsSV.spacing = 12
         buttonsSV.axis = .horizontal
         buttonsSV.distribution = .fillEqually
         self.view.addSubview(buttonsSV)
         buttonsSV.pin(to: self.view, [.left: 24, .right: 24])
         buttonsSV.pinBottom(to: self.view.safeAreaLayoutGuide.bottomAnchor, 24)
+        
+        colorsButton.addTarget(self, action: #selector(paletteButtonPressed), for: .touchUpInside)
+        notesButton.isEnabled = false
+        newsButton.isEnabled = false
+    }
+    
+    @objc
+    private func paletteButtonPressed() {
+        colorPaletteView.isHidden.toggle()
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
     }
     
     private func makeMenuButton(title: String) -> UIButton {
@@ -143,4 +167,19 @@ final class WelcomeViewController: UIViewController {
         })
     
     }
+    
+    
+    private func setupColorControlSV() {
+        colorPaletteView.isHidden = true
+        view.addSubview(colorPaletteView)
+        colorPaletteView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            colorPaletteView.topAnchor.constraint(equalTo: incrementButton.bottomAnchor, constant: 8),
+            colorPaletteView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 24),
+            colorPaletteView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -24),
+            colorPaletteView.bottomAnchor.constraint(equalTo: buttonsSV.topAnchor, constant: -8)
+        ])
+    }
+    
+    
 }

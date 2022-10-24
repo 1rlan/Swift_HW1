@@ -9,8 +9,6 @@ import UIKit
 
 protocol ObserverProtocol {
     
-    private func changeColor(_ slider: ColorPaletteView)
+    func changeState(_ color: UIColor)
 
-    
-    
 }

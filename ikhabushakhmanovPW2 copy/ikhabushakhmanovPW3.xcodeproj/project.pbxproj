@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D62D69ED28E5B16A009D3424 /* CALayerShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62D69EC28E5B16A009D3424 /* CALayerShadowExtension.swift */; };
+		D65521A6290730ED00DB5257 /* ObserverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65521A5290730ED00DB5257 /* ObserverProtocol.swift */; };
+		D660A7382906E25600646B45 /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660A7372906E25600646B45 /* ColorPaletteView.swift */; };
+		D660A73B2906E59200646B45 /* ColorPaletteView Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660A73A2906E59200646B45 /* ColorPaletteView Extension.swift */; };
+		D660A73D290718B100646B45 /* UIColor Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660A73C290718B100646B45 /* UIColor Extension.swift */; };
 		D6A6529C28E50794006E3B9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6529B28E50794006E3B9F /* AppDelegate.swift */; };
 		D6A6529E28E50794006E3B9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6529D28E50794006E3B9F /* SceneDelegate.swift */; };
 		D6A652A528E50794006E3B9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6A652A428E50794006E3B9F /* Assets.xcassets */; };
@@ -18,7 +22,11 @@
 
 /* Begin PBXFileReference section */
 		D62D69EC28E5B16A009D3424 /* CALayerShadowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerShadowExtension.swift; sourceTree = "<group>"; };
-		D6A6529828E50794006E3B9F /* ikhabushakhmanovPW2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ikhabushakhmanovPW2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D65521A5290730ED00DB5257 /* ObserverProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverProtocol.swift; sourceTree = "<group>"; };
+		D660A7372906E25600646B45 /* ColorPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
+		D660A73A2906E59200646B45 /* ColorPaletteView Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorPaletteView Extension.swift"; sourceTree = "<group>"; };
+		D660A73C290718B100646B45 /* UIColor Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor Extension.swift"; sourceTree = "<group>"; };
+		D6A6529828E50794006E3B9F /* ikhabushakhmanovPW3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ikhabushakhmanovPW3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A6529B28E50794006E3B9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6A6529D28E50794006E3B9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D6A652A428E50794006E3B9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +47,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D65521A8290730FF00DB5257 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D65521A5290730ED00DB5257 /* ObserverProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D660A7392906E25F00646B45 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				D660A7372906E25600646B45 /* ColorPaletteView.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
 		D6A6528F28E50793006E3B9F = {
 			isa = PBXGroup;
 			children = (
@@ -50,7 +74,7 @@
 		D6A6529928E50794006E3B9F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D6A6529828E50794006E3B9F /* ikhabushakhmanovPW2.app */,
+				D6A6529828E50794006E3B9F /* ikhabushakhmanovPW3.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,12 +82,14 @@
 		D6A6529A28E50794006E3B9F /* ikhabushakhmanovPW2 */ = {
 			isa = PBXGroup;
 			children = (
+				D65521A8290730FF00DB5257 /* Protocols */,
 				D6BC5B9628E799E800F95E4D /* Controllers */,
 				D6BC5B9528E799D400F95E4D /* Extensions */,
 				D6C19C6728F2D9E5000AB761 /* Delegates */,
 				D6A652A428E50794006E3B9F /* Assets.xcassets */,
 				D6A652A628E50794006E3B9F /* LaunchScreen.storyboard */,
 				D6A652A928E50794006E3B9F /* Info.plist */,
+				D660A7392906E25F00646B45 /* Custom Views */,
 			);
 			path = ikhabushakhmanovPW2;
 			sourceTree = "<group>";
@@ -73,6 +99,8 @@
 			children = (
 				D62D69EC28E5B16A009D3424 /* CALayerShadowExtension.swift */,
 				D6A652B128E50A98006E3B9F /* UIViewPinExtension.swift */,
+				D660A73A2906E59200646B45 /* ColorPaletteView Extension.swift */,
+				D660A73C290718B100646B45 /* UIColor Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -97,9 +125,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D6A6529728E50794006E3B9F /* ikhabushakhmanovPW2 */ = {
+		D6A6529728E50794006E3B9F /* ikhabushakhmanovPW3 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D6A652AC28E50794006E3B9F /* Build configuration list for PBXNativeTarget "ikhabushakhmanovPW2" */;
+			buildConfigurationList = D6A652AC28E50794006E3B9F /* Build configuration list for PBXNativeTarget "ikhabushakhmanovPW3" */;
 			buildPhases = (
 				D6A6529428E50794006E3B9F /* Sources */,
 				D6A6529528E50794006E3B9F /* Frameworks */,
@@ -109,9 +137,9 @@
 			);
 			dependencies = (
 			);
-			name = ikhabushakhmanovPW2;
+			name = ikhabushakhmanovPW3;
 			productName = ikhabushakhmanovPW2;
-			productReference = D6A6529828E50794006E3B9F /* ikhabushakhmanovPW2.app */;
+			productReference = D6A6529828E50794006E3B9F /* ikhabushakhmanovPW3.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -129,7 +157,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D6A6529328E50793006E3B9F /* Build configuration list for PBXProject "ikhabushakhmanovPW2" */;
+			buildConfigurationList = D6A6529328E50793006E3B9F /* Build configuration list for PBXProject "ikhabushakhmanovPW3" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -142,7 +170,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D6A6529728E50794006E3B9F /* ikhabushakhmanovPW2 */,
+				D6A6529728E50794006E3B9F /* ikhabushakhmanovPW3 */,
 			);
 		};
 /* End PBXProject section */
@@ -166,8 +194,12 @@
 			files = (
 				D6A652B228E50A98006E3B9F /* UIViewPinExtension.swift in Sources */,
 				D6A652B028E5084E006E3B9F /* WelcomeViewController.swift in Sources */,
+				D660A73B2906E59200646B45 /* ColorPaletteView Extension.swift in Sources */,
 				D62D69ED28E5B16A009D3424 /* CALayerShadowExtension.swift in Sources */,
+				D660A73D290718B100646B45 /* UIColor Extension.swift in Sources */,
+				D65521A6290730ED00DB5257 /* ObserverProtocol.swift in Sources */,
 				D6A6529C28E50794006E3B9F /* AppDelegate.swift in Sources */,
+				D660A7382906E25600646B45 /* ColorPaletteView.swift in Sources */,
 				D6A6529E28E50794006E3B9F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +389,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D6A6529328E50793006E3B9F /* Build configuration list for PBXProject "ikhabushakhmanovPW2" */ = {
+		D6A6529328E50793006E3B9F /* Build configuration list for PBXProject "ikhabushakhmanovPW3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6A652AA28E50794006E3B9F /* Debug */,
@@ -366,7 +398,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D6A652AC28E50794006E3B9F /* Build configuration list for PBXNativeTarget "ikhabushakhmanovPW2" */ = {
+		D6A652AC28E50794006E3B9F /* Build configuration list for PBXNativeTarget "ikhabushakhmanovPW3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6A652AD28E50794006E3B9F /* Debug */,
