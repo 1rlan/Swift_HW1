@@ -144,6 +144,7 @@ final class WelcomeViewController: UIViewController, ObserverProtocol {
     
     @objc
     private func paletteButtonPressed() {
+        colorPaletteView.updateSlidersValue(view.backgroundColor ?? .white)
         colorPaletteView.isHidden.toggle()
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()
@@ -180,6 +181,4 @@ final class WelcomeViewController: UIViewController, ObserverProtocol {
             colorPaletteView.bottomAnchor.constraint(equalTo: buttonsSV.topAnchor, constant: -8)
         ])
     }
-    
-    
 }

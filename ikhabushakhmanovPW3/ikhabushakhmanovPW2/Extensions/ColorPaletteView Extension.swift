@@ -11,18 +11,24 @@ extension ColorPaletteView {
     
     final class ColorSliderView : UIControl {
         
-        private let slider = UISlider()
+        public let slider = UISlider()
         private let colorLabel = UILabel()
         
-        private(set) var value : Float
+        var value : Float {
+            get {
+                slider.value
+            } set {
+                slider.value = newValue
+            }
+        }
         
         init(colorName : String, value : Float) {
-            self.value = value
             super.init(frame: .zero)
             colorLabel.text = colorName
             slider.value = value
             setupView()
             slider.addTarget(self, action: #selector(sliderMoved(_ :)) , for: .touchUpInside)
+            self.value = value
         }
         
         @available(*, unavailable)
@@ -43,8 +49,5 @@ extension ColorPaletteView {
             self.value = slider.value
             sendActions(for: .touchDragInside)
         }
-        
-        
-        
     }
 }

@@ -16,8 +16,6 @@ final class ColorPaletteView: UIControl {
 
 
     
-    
-    
     init() {
         super.init(frame: .zero)
         setupView()
@@ -77,5 +75,20 @@ final class ColorPaletteView: UIControl {
         }
         sendActions(for: .touchDragInside)
         delegate?.changeState(chosenColor)
+    }
+    
+    
+    func updateSlidersValue(_ viewColor : UIColor) {
+        let pal = viewColor.getComponents()
+        for slider in stackView.arrangedSubviews {
+            switch slider.tag {
+            case 0:
+                (slider as! ColorSliderView).value = Float(pal[0])
+            case 1:
+                (slider as! ColorSliderView).value = Float(pal[1])
+            default:
+                (slider as! ColorSliderView).value = Float(pal[2])
+            }
+        }
     }
 }
