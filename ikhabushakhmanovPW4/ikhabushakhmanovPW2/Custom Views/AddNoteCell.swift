@@ -9,11 +9,9 @@ import UIKit
 final class AddNoteCell: UITableViewCell, UITextViewDelegate{
     var delegate = NotesViewController()
     static let reuseIdentifier = "AddNoteCell"
-    
     private var textView = UITextView()
     public var addButton = UIButton()
     
-    // MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.selectionStyle = .none
@@ -28,6 +26,12 @@ final class AddNoteCell: UITableViewCell, UITextViewDelegate{
     }
     
     private func setupView() {
+        setupTextView()
+        setupButton()
+        setupStack()
+    }
+
+    func setupTextView() {
         textView.font = .systemFont(ofSize: 14, weight: .regular)
         textView.delegate = self
         textView.textColor = .lightGray
@@ -35,11 +39,9 @@ final class AddNoteCell: UITableViewCell, UITextViewDelegate{
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.heightAnchor.constraint(equalToConstant: 144).isActive = true
         textView.text = "Ты можешь поделиться со мной мыслями..."
-        
-        
-        
-        
-        
+    }
+    
+    func setupButton() {
         addButton.setTitle("Add new note", for: .normal)
         addButton.titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
         addButton.setTitleColor(.systemBackground, for: .normal)
@@ -50,6 +52,9 @@ final class AddNoteCell: UITableViewCell, UITextViewDelegate{
         addButton.addTarget(self, action: #selector(addButtonTapped(_:)), for: .touchUpInside)
         addButton.isEnabled = true
         addButton.alpha = 0.5
+    }
+    
+    func setupStack() {
         let stackView = UIStackView(arrangedSubviews: [textView, addButton])
         stackView.axis = .vertical
         stackView.spacing = 8
@@ -58,6 +63,7 @@ final class AddNoteCell: UITableViewCell, UITextViewDelegate{
         stackView.pin(to: contentView, [.left: 16, .top: 16, .right: 16, .bottom: 16])
         contentView.backgroundColor = .systemGray5
     }
+    
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         if self.textView.textColor == UIColor.lightGray {

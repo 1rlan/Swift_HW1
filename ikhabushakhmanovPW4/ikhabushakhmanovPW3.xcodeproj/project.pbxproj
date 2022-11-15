@@ -12,6 +12,9 @@
 		D625347C2922315E00F62E1C /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D625347B2922315E00F62E1C /* NoteCell.swift */; };
 		D625347E29223B4400F62E1C /* AddNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D625347D29223B4400F62E1C /* AddNoteCell.swift */; };
 		D62D69ED28E5B16A009D3424 /* CALayerShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62D69EC28E5B16A009D3424 /* CALayerShadowExtension.swift */; };
+		D642EEAC292398BD0068A04C /* Notes.json in Resources */ = {isa = PBXBuildFile; fileRef = D6AE28DE2922EAD000CDEA53 /* Notes.json */; };
+		D642EEAE292399350068A04C /* AddNoteDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D642EEAD292399350068A04C /* AddNoteDelegate.swift */; };
+		D642EEB0292399550068A04C /* NotesViewController Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D642EEAF292399550068A04C /* NotesViewController Extension.swift */; };
 		D65521A6290730ED00DB5257 /* ObserverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65521A5290730ED00DB5257 /* ObserverProtocol.swift */; };
 		D660A7382906E25600646B45 /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660A7372906E25600646B45 /* ColorPaletteView.swift */; };
 		D660A73B2906E59200646B45 /* ColorPaletteView Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660A73A2906E59200646B45 /* ColorPaletteView Extension.swift */; };
@@ -22,7 +25,6 @@
 		D6A652A828E50794006E3B9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A652A628E50794006E3B9F /* LaunchScreen.storyboard */; };
 		D6A652B028E5084E006E3B9F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A652AF28E5084E006E3B9F /* WelcomeViewController.swift */; };
 		D6A652B228E50A98006E3B9F /* UIViewPinExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A652B128E50A98006E3B9F /* UIViewPinExtension.swift */; };
-		D6AE28DF2922EAD000CDEA53 /* Notes.json in Resources */ = {isa = PBXBuildFile; fileRef = D6AE28DE2922EAD000CDEA53 /* Notes.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		D625347B2922315E00F62E1C /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		D625347D29223B4400F62E1C /* AddNoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteCell.swift; sourceTree = "<group>"; };
 		D62D69EC28E5B16A009D3424 /* CALayerShadowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerShadowExtension.swift; sourceTree = "<group>"; };
+		D642EEAD292399350068A04C /* AddNoteDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteDelegate.swift; sourceTree = "<group>"; };
+		D642EEAF292399550068A04C /* NotesViewController Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotesViewController Extension.swift"; sourceTree = "<group>"; };
 		D65521A5290730ED00DB5257 /* ObserverProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverProtocol.swift; sourceTree = "<group>"; };
 		D660A7372906E25600646B45 /* ColorPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
 		D660A73A2906E59200646B45 /* ColorPaletteView Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorPaletteView Extension.swift"; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				D65521A5290730ED00DB5257 /* ObserverProtocol.swift */,
+				D642EEAD292399350068A04C /* AddNoteDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 				D6A652B128E50A98006E3B9F /* UIViewPinExtension.swift */,
 				D660A73A2906E59200646B45 /* ColorPaletteView Extension.swift */,
 				D660A73C290718B100646B45 /* UIColor Extension.swift */,
+				D642EEAF292399550068A04C /* NotesViewController Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -211,7 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6AE28DF2922EAD000CDEA53 /* Notes.json in Resources */,
+				D642EEAC292398BD0068A04C /* Notes.json in Resources */,
 				D6A652A828E50794006E3B9F /* LaunchScreen.storyboard in Resources */,
 				D6A652A528E50794006E3B9F /* Assets.xcassets in Resources */,
 			);
@@ -226,6 +232,7 @@
 			files = (
 				D625347E29223B4400F62E1C /* AddNoteCell.swift in Sources */,
 				D6A652B228E50A98006E3B9F /* UIViewPinExtension.swift in Sources */,
+				D642EEAE292399350068A04C /* AddNoteDelegate.swift in Sources */,
 				D6A652B028E5084E006E3B9F /* WelcomeViewController.swift in Sources */,
 				D660A73B2906E59200646B45 /* ColorPaletteView Extension.swift in Sources */,
 				D625347C2922315E00F62E1C /* NoteCell.swift in Sources */,
@@ -233,6 +240,7 @@
 				D660A73D290718B100646B45 /* UIColor Extension.swift in Sources */,
 				D65521A6290730ED00DB5257 /* ObserverProtocol.swift in Sources */,
 				D625347729222D2800F62E1C /* NotesViewController.swift in Sources */,
+				D642EEB0292399550068A04C /* NotesViewController Extension.swift in Sources */,
 				D6A6529C28E50794006E3B9F /* AppDelegate.swift in Sources */,
 				D660A7382906E25600646B45 /* ColorPaletteView.swift in Sources */,
 				D625347A292230FE00F62E1C /* ShortNote.swift in Sources */,
